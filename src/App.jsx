@@ -12,7 +12,7 @@ const profile = {
   role: "Aspiring Full-Stack Developer & Data Science Enthusiast",
   location: "Ahmedabad, Gujarat, India",
   email: "zarnarami1016@gmail.com",
-  github: "https://github.com/",
+  github: "https://github.com/zarnarami",
   linkedin: "https://www.linkedin.com/",
   resume: "/Zarna_Rami.pdf",
   photo: "/Zarna.JPEG",
