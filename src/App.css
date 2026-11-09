@@ -349,7 +349,16 @@ button { font: inherit; }
   .photo-card { width: min(310px, 78%); }
   .photo-frame { height: 330px; }
   .chip-top { top: 45px; right: 0; }
-  .chip-bottom { bottom: 38px; left: 0; }
+  /* Curious by Nature - Mobile Position */
+.chip-bottom {
+  bottom: 150px;
+  left: 0;
+  right: auto;
+  width: fit-content;
+  max-width: calc(100% - 20px);
+  white-space: nowrap;
+  z-index: 5;
+}
   .scroll-cue { left: 0; bottom: 0; }
   .about-grid { grid-template-columns: 1fr; }
   .about-card { padding: 25px; }
@@ -372,4 +381,36 @@ button { font: inherit; }
   .project-card { min-height: 300px; }
   .social-location { font-size: 9px; }
   .hero-buttons .button { padding: 0 15px; }
+}
+/* Fix Curious by Nature overlapping with name on mobile */
+
+@media (max-width: 768px) {
+  .chip-bottom {
+    position: absolute !important;
+
+    /* Move chip upward */
+    bottom: 65px !important;
+
+    /* Keep chip on left side */
+    left: 10px !important;
+    right: auto !important;
+
+    /* Prevent full-width stretching */
+    width: fit-content !important;
+    max-width: calc(100% - 20px);
+
+    white-space: nowrap;
+    z-index: 10;
+
+    padding: 7px 12px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 400px) {
+  .chip-bottom {
+    bottom: 75px !important;
+    padding: 6px 9px;
+    font-size: 10px;
+  }
 }
